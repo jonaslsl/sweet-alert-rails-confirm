@@ -1,18 +1,7 @@
 sweet-alert-rails-confirm
 =========================
 
-[![Build Status](https://travis-ci.org/mois3x/sweet-alert-rails-confirm.svg?branch=master)](http://travis-ci.org/mois3x/sweet-alert-rails-confirm)
-
-
 A Rails confirm replacement with SweetAlert
-
-depends on https://github.com/t4t5/sweetalert
-
-So you need to Install:
-    gem 'sweet-alert'
-
-Or the latest with:
-    gem 'rails-assets-sweetalert' # Using https://rails-assets.org/ 
 
 ## Requirements
 Rails >= 3.1
@@ -21,22 +10,32 @@ Rails >= 3.1
 
 Add it to your Gemfile:
 ```ruby
-gem 'sweet-alert'
-gem 'sweet-alert-confirm'
+gem 'sweet-alert-confirm', github: 'marcelobarreto/sweet-alert-confirm'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-sweetalert'
+end
+
 ```
 
 Add the following to application.js:
 
 ```javascript
-//= require sweet-alert
+//= require sweetalert
 //= require sweet-alert-confirm
 ```
 Add the following to application.css:
 
 ```css
 /*
- *= require sweet-alert
+ *= require sweetalert
  */
+```
+
+OR
+
+```scss
+@import "sweetalert";
 ```
 
 ### Custom options
@@ -45,13 +44,13 @@ Add the following to application.css:
 You can pass options in `data:`
 ```Ruby
  data: {
-  :'sweet-alert-confirm: 'Are you ready?'
-  :'confirm-button-text' => 'Im ready',
-  :'cancel-button-text' => 'No way',
-  :'confirm-button-color' => '#66CD00',
-  :'sweet-alert-type' => 'info',
+  sweetAlertConfirm: 'Are you ready?'
+  confirmButtonText: 'Im ready',
+  cancelButtonText: 'No way',
+  confirmButtonColor: '#66CD00',
+  sweetAlertType: 'info',
   text: 'This is a subtitle',
-  :'image-url' => '/pic.png'
+  imageUrl: '/pic.png'
 }
 ```
 
