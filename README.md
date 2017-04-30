@@ -44,13 +44,13 @@ OR
 You can pass options in `data:`
 ```Ruby
  data: {
-  sweetAlertConfirm: 'Are you ready?'
-  confirmButtonText: 'Im ready',
-  cancelButtonText: 'No way',
-  confirmButtonColor: '#66CD00',
-  sweetAlertType: 'info',
+  sweet_alert_confirm: 'Are you ready?'
+  confirm_button_text: 'Im ready',
+  cancel_button_text: 'No way',
+  confirm_button_color: '#66CD00',
+  sweet_alert_type: 'info',
   text: 'This is a subtitle',
-  imageUrl: '/pic.png'
+  image_url: '/pic.png'
 }
 ```
 
